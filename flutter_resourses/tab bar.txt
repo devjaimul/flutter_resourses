@@ -1,0 +1,54 @@
+DefaultTabController(
+
+      length: 4,
+      child: Scaffold(
+      appBar: AppBar(
+
+        title: const Text("Whatsapp"),
+
+
+        actions: const [Icon(Icons.search_sharp),
+        SizedBox(width: 10,),
+          Icon(Icons.more_horiz),
+          SizedBox(width: 10,),
+
+        ],
+
+        bottom: const TabBar(
+                                  labelColor: Colors.white,
+                dividerColor: Colors.grey, //indicator ar niche akta dag /divider add kore
+                indicatorColor: Colors.white, //niche j sada dag thake oitar color
+                isScrollable: true, //beci tab hole scroll kore jay pase
+                unselectedLabelColor: Colors.grey.shade400, //vitore j text ase oitar color
+
+
+
+
+tabs: [
+
+          Tab(
+            child: Icon(Icons.camera_alt),
+
+          ),
+          Tab(
+            child: Text("Chats"),
+          ),
+          Tab(
+            child: Text("Status"),
+          ),
+          Tab(
+            child: Text("Calls"),
+          ),
+
+
+
+        ]),
+      ),
+
+        body: const TabBarView(children: [
+          Text("Camera"),
+          Text("Chats"),
+          Text("Status"),
+          Text("Calls"),
+        ]),
+    ),);

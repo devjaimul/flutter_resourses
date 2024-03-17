@@ -1,0 +1,8 @@
+  bottomNavigationBar: BottomNavigationBar(
+  currentIndex: 1,
+  items: [
+    BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+    BottomNavigationBarItem(icon: Icon(Icons.phone),label: "Contact"),
+    BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
+  ],
+),

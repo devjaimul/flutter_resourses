@@ -1,0 +1,17 @@
+ MySnackBar (message,Context){
+    return ScaffoldMessenger.of(Context).showSnackBar
+      (SnackBar(content: Text(message)));
+  }
+
+
+
+
+body: Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+
+    TextButton(onPressed: (){MySnackBar("i am a text button", context);}, child: Text("text button")),
+    ElevatedButton(onPressed: (){MySnackBar("i am a elaveted button", context);}, child: Text("elavated button")),
+    OutlinedButton(onPressed: (){MySnackBar("i am a outline button", context);}, child: Text("outline button")),
+  ]
+)

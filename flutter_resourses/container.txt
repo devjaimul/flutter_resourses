@@ -1,0 +1,48 @@
+ body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+            
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Center(
+                  child: Container(
+                    height: 250,
+                    width: 250,
+                    transform: Matrix4.rotationZ(.2),
+                    child: Center(child: Text("Login")),
+                    decoration: BoxDecoration(
+                      color: Colors.teal,
+                        image: DecorationImage(
+
+                          fit:BoxFit.cover ,
+                            image: NetworkImage("https://th.bing.com/th/id/OIP.bt2fbVA48_maop4qmL4WCgHaJP?pid=ImgDet&w=640&h=799&rs=1")),
+
+                      // border: Border.all(
+                      //   color: Colors.red,
+                      //   width: 2,
+                      //
+                      // ),
+
+                      
+                     // borderRadius: BorderRadius.circular(5),
+
+                    // borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(10),
+                    bottomLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(20),
+                  )
+                    
+                    boxShadow: [BoxShadow(
+                      color: Colors.black12.withOpacity(0.5),
+                      blurRadius: 30
+                    )]
+
+
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),

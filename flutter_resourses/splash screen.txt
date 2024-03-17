@@ -1,0 +1,35 @@
+import 'dart:async';
+
+import 'package:a04/home_screen.dart';
+import 'package:flutter/material.dart';
+
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {        //ai funtuction ta use kore kore prothom a spalsh splash screen dekhano hy
+    // TODO: implement initState
+    super.initState();
+     Timer(Duration(seconds: 5), () {
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>HomeScreen()));    //routing diye ak page theke onno page a pathano hy
+     });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+      body: Ink.image(
+       // height: double.infinity,
+        //fit: BoxFit.fitHeight,
+image: NetworkImage("https://blog.eduonix.com/wp-content/uploads/2015/02/404-Error.jpg"),      ),
+    );
+  }
+}

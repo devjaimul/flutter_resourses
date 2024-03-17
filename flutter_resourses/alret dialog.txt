@@ -1,0 +1,43 @@
+  body: Center(
+
+
+        child: Container(
+
+
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(onPressed: (){MyAlretDialog(context);}, child: Text("click here")),
+            ],
+          ),
+        ),
+      ),
+
+
+
+
+
+
+MyAlretDialog (context) {
+  return showDialog(
+      context: context,
+      builder: (BuildContext context){
+        return Expanded(
+            child:AlertDialog(
+              title: Text("Alert !"),
+              content: Text("Do you want to close it?"),
+              actions: [
+                TextButton(onPressed: (){
+                Navigator.of(context).pop();
+                MySnackBar("Delete succes", context);}
+                    , child: Text("Yes"),),
+
+
+                TextButton(onPressed: (){Navigator.of(context).pop();}, child: Text("No"))
+              ],
+            )
+        );
+
+      }
+  );
+}
